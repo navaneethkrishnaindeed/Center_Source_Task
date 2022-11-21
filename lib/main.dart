@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:taskhttpapicovid/Domain/DependancyInjection/injectable.dart';
 import 'package:taskhttpapicovid/Infrastructure/Repository/DataRepo.dart';
+import 'package:taskhttpapicovid/Presentation/splash.dart';
 
 import 'Application/bloc/bloc_data_load_bloc.dart';
 
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: Home()),
+          home: SplashScreenone()),
     );
   }
 }

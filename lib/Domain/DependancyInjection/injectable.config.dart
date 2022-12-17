@@ -8,8 +8,8 @@
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
-import '../../Application/bloc/bloc_data_load_bloc.dart' as _i4;
-import '../../Infrastructure/Repository/DataRepo.dart'
+import '../../Application/Search/bloc/search_bloc.dart' as _i4;
+import '../../Infrastructure/Search_Repository/Search_Repo.dart'
     as _i3; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
@@ -24,8 +24,7 @@ _i1.GetIt $initGetIt(
     environment,
     environmentFilter,
   );
-  gh.lazySingleton<_i3.IDataRepo>(() => _i3.Repository());
-  gh.factory<_i4.BlocDataLoadBloc>(
-      () => _i4.BlocDataLoadBloc(get<_i3.IDataRepo>()));
+  gh.lazySingleton<_i3.ISearchRepo>(() => _i3.SearchImpl());
+  gh.factory<_i4.SearchBloc>(() => _i4.SearchBloc(get<_i3.ISearchRepo>()));
   return get;
 }

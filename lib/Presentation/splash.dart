@@ -21,12 +21,9 @@ class SplashScreenone extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            
             Spacer(),
             Center(child: Container(child:Image.asset("assets/logo.webp"))),
             Spacer(),
-   
-            
           ],
         ),
       )),

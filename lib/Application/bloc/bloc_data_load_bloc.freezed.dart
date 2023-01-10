@@ -167,7 +167,7 @@ abstract class _GetDataFromApi implements DataLoadEvent {
 /// @nodoc
 mixin _$DataLoadStates {
   bool get isoading => throw _privateConstructorUsedError;
-  List<DataClass>? get valueObjs => throw _privateConstructorUsedError;
+  List<DataClass> get valueObjs => throw _privateConstructorUsedError;
   Option<Either<MainFailure, List<DataClass>>>
       get downloadsFailureOrSuccessOption => throw _privateConstructorUsedError;
 
@@ -184,7 +184,7 @@ abstract class $DataLoadStatesCopyWith<$Res> {
   @useResult
   $Res call(
       {bool isoading,
-      List<DataClass>? valueObjs,
+      List<DataClass> valueObjs,
       Option<Either<MainFailure, List<DataClass>>>
           downloadsFailureOrSuccessOption});
 }
@@ -203,7 +203,7 @@ class _$DataLoadStatesCopyWithImpl<$Res, $Val extends DataLoadStates>
   @override
   $Res call({
     Object? isoading = null,
-    Object? valueObjs = freezed,
+    Object? valueObjs = null,
     Object? downloadsFailureOrSuccessOption = null,
   }) {
     return _then(_value.copyWith(
@@ -211,10 +211,10 @@ class _$DataLoadStatesCopyWithImpl<$Res, $Val extends DataLoadStates>
           ? _value.isoading
           : isoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      valueObjs: freezed == valueObjs
+      valueObjs: null == valueObjs
           ? _value.valueObjs
           : valueObjs // ignore: cast_nullable_to_non_nullable
-              as List<DataClass>?,
+              as List<DataClass>,
       downloadsFailureOrSuccessOption: null == downloadsFailureOrSuccessOption
           ? _value.downloadsFailureOrSuccessOption
           : downloadsFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
@@ -233,7 +233,7 @@ abstract class _$$_DataLoadStatesCopyWith<$Res>
   @useResult
   $Res call(
       {bool isoading,
-      List<DataClass>? valueObjs,
+      List<DataClass> valueObjs,
       Option<Either<MainFailure, List<DataClass>>>
           downloadsFailureOrSuccessOption});
 }
@@ -250,7 +250,7 @@ class __$$_DataLoadStatesCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isoading = null,
-    Object? valueObjs = freezed,
+    Object? valueObjs = null,
     Object? downloadsFailureOrSuccessOption = null,
   }) {
     return _then(_$_DataLoadStates(
@@ -258,10 +258,10 @@ class __$$_DataLoadStatesCopyWithImpl<$Res>
           ? _value.isoading
           : isoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      valueObjs: freezed == valueObjs
+      valueObjs: null == valueObjs
           ? _value._valueObjs
           : valueObjs // ignore: cast_nullable_to_non_nullable
-              as List<DataClass>?,
+              as List<DataClass>,
       downloadsFailureOrSuccessOption: null == downloadsFailureOrSuccessOption
           ? _value.downloadsFailureOrSuccessOption
           : downloadsFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
@@ -275,19 +275,17 @@ class __$$_DataLoadStatesCopyWithImpl<$Res>
 class _$_DataLoadStates implements _DataLoadStates {
   const _$_DataLoadStates(
       {required this.isoading,
-      final List<DataClass>? valueObjs,
+      required final List<DataClass> valueObjs,
       required this.downloadsFailureOrSuccessOption})
       : _valueObjs = valueObjs;
 
   @override
   final bool isoading;
-  final List<DataClass>? _valueObjs;
+  final List<DataClass> _valueObjs;
   @override
-  List<DataClass>? get valueObjs {
-    final value = _valueObjs;
-    if (value == null) return null;
+  List<DataClass> get valueObjs {
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableListView(_valueObjs);
   }
 
   @override
@@ -331,14 +329,14 @@ class _$_DataLoadStates implements _DataLoadStates {
 abstract class _DataLoadStates implements DataLoadStates {
   const factory _DataLoadStates(
       {required final bool isoading,
-      final List<DataClass>? valueObjs,
+      required final List<DataClass> valueObjs,
       required final Option<Either<MainFailure, List<DataClass>>>
           downloadsFailureOrSuccessOption}) = _$_DataLoadStates;
 
   @override
   bool get isoading;
   @override
-  List<DataClass>? get valueObjs;
+  List<DataClass> get valueObjs;
   @override
   Option<Either<MainFailure, List<DataClass>>>
       get downloadsFailureOrSuccessOption;

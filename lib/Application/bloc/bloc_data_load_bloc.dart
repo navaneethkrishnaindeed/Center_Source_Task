@@ -17,10 +17,11 @@ part 'bloc_data_load_state.dart';
 
 @injectable
 class BlocDataLoadBloc extends Bloc<DataLoadEvent, DataLoadStates> {
+  
   final IDataRepo _iDataRepo;
-
   BlocDataLoadBloc(this._iDataRepo) : super(DataLoadStates.initial()) {
     on<_GetDataFromApi>((event, emit) async {
+      
       emit(
         state.copyWith(
           isoading: true,

@@ -16,4 +16,7 @@ class DataLoadStates with _$DataLoadStates {
       downloadsFailureOrSuccessOption: None(),
     );
   }
+
+
+
 }

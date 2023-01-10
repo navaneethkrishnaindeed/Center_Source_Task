@@ -1,10 +1,14 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:taskhttpapicovid/Domain/DependancyInjection/injectable.dart';
 import 'package:taskhttpapicovid/Infrastructure/Repository/DataRepo.dart';
 import 'package:taskhttpapicovid/Presentation/splash.dart';
 
+import 'Application/Search/bloc/search_bloc.dart';
 import 'Application/bloc/bloc_data_load_bloc.dart';
+import 'Presentation/search.dart';
 
 Repository repo = Repository();
 Future<void> main() async {
@@ -25,13 +29,44 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (ctx) => getIt<BlocDataLoadBloc>()),
+        BlocProvider(create: (ctx) => getIt<SearchBloc>()),
       ],
       child: MaterialApp(
-          title: 'Flutter Demo',
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-          ),
-          home: SplashScreenone()),
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: SearchPage()
+        // Scaffold(
+          
+        //   body: Center(
+        //     child: DropdownButton(
+        //       alignment: Alignment.bottomCenter,
+        //       elevation: 0,
+        //         items: [
+        //           DropdownMenuItem<int>(
+        //             child: Container(
+        //               width: 300,
+        //               child: Text("udfuudhf"),
+        //             ),
+        //             value: 1,
+        //           ),
+        //           DropdownMenuItem<int>(
+        //             child: Text("udfuudhf"),
+        //             value: 2,
+        //           ),
+        //           DropdownMenuItem<int>(
+        //             child: Text("udfuudhf"),
+        //             value: 3,
+        //           ),
+        //         ],
+        //         onChanged: (value) {
+        //           log(value.toString());
+        //         }),
+        //   ),
+        // ),
+    
+      ),
     );
   }
 }
@@ -64,7 +99,6 @@ class Home extends StatelessWidget {
                     //   trailing: Text(state.valueObjs![index].totalConfirmed.toString()),
                     //   title: Text(state.valueObjs![index].totalConfirmed.toString()),
                     // );
-                    
                     return Container(
                       height: 100,
                       child: Column(

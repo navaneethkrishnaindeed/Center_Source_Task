@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -31,7 +30,8 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
       
       emit(
           result.fold((f) => state, (r) => state.copyWith(searchReultList: r)));
-      // emit();
+
+          
       Navigator.of(event.ctx).push(MaterialPageRoute(builder: ((context) {
         return Scaffold();
       })));

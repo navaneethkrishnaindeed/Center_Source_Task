@@ -21,14 +21,12 @@ class BlocDataLoadBloc extends Bloc<DataLoadEvent, DataLoadStates> {
   final IDataRepo _iDataRepo;
   BlocDataLoadBloc(this._iDataRepo) : super(DataLoadStates.initial()) {
     on<_GetDataFromApi>((event, emit) async {
-      
       emit(
         state.copyWith(
           isoading: true,
           downloadsFailureOrSuccessOption: none(),
         ),
       );
-
       final dataOption = await _iDataRepo.getDataFromApi();
      log(dataOption.toString());
       emit(dataOption.fold(

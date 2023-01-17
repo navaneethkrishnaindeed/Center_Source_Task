@@ -5,7 +5,8 @@ class SearchState with _$SearchState {
   const factory SearchState({
     required List<SearchResult> searchReultList,
     required bool isLoading,
-    required bool isError,required Option<Either<MainFailure, List<SearchResult>>>
+    required bool isError,
+    required Option<Either<MainFailure, List<SearchResult>>>
         downloadsFailureOrSuccessOption,
   }) = _SearchState;
 

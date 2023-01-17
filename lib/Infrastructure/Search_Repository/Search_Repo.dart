@@ -26,7 +26,7 @@ class SearchImpl implements ISearchRepo {
         "q": nameOfTheImagetoSearch,
         "image_type":"photo"
       })).get(ApiEndPoints.search);
-
+      
       // final List<DataClass> datas = [];
       // log(response.data['Countries'].toString());
       // for (final raw in response.data) {
@@ -34,8 +34,6 @@ class SearchImpl implements ISearchRepo {
       // }
       // log("message");
       //  log(response.toString());
-
-      
       if (response.statusCode == 200 || response.statusCode == 201) {
         // final datas = SearchResult.fromJson(response.data["hits"][1]);
 

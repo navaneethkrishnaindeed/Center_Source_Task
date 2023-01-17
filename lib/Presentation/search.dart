@@ -9,10 +9,12 @@ class SearchPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       BlocProvider.of<SearchBloc>(context)
           .add( SearchImage(imageQuery: "",ctx: context));
     });
+
     return Container(
       child: Scaffold(
           body: SafeArea(

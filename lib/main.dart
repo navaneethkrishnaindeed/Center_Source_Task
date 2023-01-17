@@ -37,35 +37,6 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: SearchPage()
-        // Scaffold(
-          
-        //   body: Center(
-        //     child: DropdownButton(
-        //       alignment: Alignment.bottomCenter,
-        //       elevation: 0,
-        //         items: [
-        //           DropdownMenuItem<int>(
-        //             child: Container(
-        //               width: 300,
-        //               child: Text("udfuudhf"),
-        //             ),
-        //             value: 1,
-        //           ),
-        //           DropdownMenuItem<int>(
-        //             child: Text("udfuudhf"),
-        //             value: 2,
-        //           ),
-        //           DropdownMenuItem<int>(
-        //             child: Text("udfuudhf"),
-        //             value: 3,
-        //           ),
-        //         ],
-        //         onChanged: (value) {
-        //           log(value.toString());
-        //         }),
-        //   ),
-        // ),
-    
       ),
     );
   }
@@ -112,27 +83,27 @@ class Home extends StatelessWidget {
                           Row(
                             children: [
                               Text("Country : "),
-                              Text(state.valueObjs![index].country.toString())
+                              Text(state.valueObjs[index].country.toString())
                             ],
                           ),
                           Row(
                             children: [
                               Text("Total Confirmed : "),
-                              Text(state.valueObjs![index].totalConfirmed
+                              Text(state.valueObjs[index].totalConfirmed
                                   .toString())
                             ],
                           ),
                           Row(
                             children: [
                               Text("Total death : "),
-                              Text(state.valueObjs![index].totalDeaths
+                              Text(state.valueObjs[index].totalDeaths
                                   .toString())
                             ],
                           ),
                           Row(
                             children: [
                               Text("Total Recovered : "),
-                              Text(state.valueObjs![index].totalRecovered
+                              Text(state.valueObjs[index].totalRecovered
                                   .toString())
                             ],
                           )
